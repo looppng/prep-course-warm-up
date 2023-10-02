@@ -1,6 +1,6 @@
-export {};
+export { };
 
-function trimWord(word:string) {
+function trimWord(word: string): string {
   return word.trim();
 }
 

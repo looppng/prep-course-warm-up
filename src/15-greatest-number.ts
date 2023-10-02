@@ -6,7 +6,7 @@ function greatest(x: number, y: number) {
     } else if (x < y) {
         return y
     } else {
-        return "x and y are equal"
+        return `${x} is equal to ${y}`
     }
 }
 

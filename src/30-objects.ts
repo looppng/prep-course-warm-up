@@ -1,4 +1,4 @@
-export {};
+export { };
 
 /**
  * Ah, objects...
@@ -20,6 +20,18 @@ const books = [
   }
 ];
 
-const getTheTitles = () => {};
+interface Book {
+  title: string;
+  author: string;
+}
+
+const getTheTitles = (bookList: Book[]) => {
+  const titles = [];
+  for (const book of bookList) {
+    titles.push(book.title);
+  }
+  return titles;
+};
+
 
 console.log(getTheTitles(books)); // Expected output: ['4 hour work week', 'Tools of Titans']

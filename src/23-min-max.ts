@@ -1,14 +1,12 @@
-export {};
+export { };
 
 /**
  * Try to find at least two different solutions for this exercise,
  * one of which does not use built-in Math methods.
  */
 
-const min = array => {};
-
-const max = array => {};
-
+const min = (Array: number[]) => Math.min(...Array);
+const max = (Array: number[]) => Math.max(...Array);
 console.log(min([1, 2, 3, 4, 5])); // Expected output: 1
 console.log(min([9, -3, 6])); // Expected output: -3
 console.log(max([1, 2, 3, 4, 5])); // Expected output: 5

@@ -1,4 +1,4 @@
-export {};
+export { };
 
 /**
  * Currency Formatting
@@ -14,19 +14,24 @@ export {};
  * and use them in place of convertToUSD() and convertToBRL()
  */
 
+
 // You are allowed to change this function
-function convertToUSD(price) {}
-// You are allowed to change this function
-function convertToBRL(price) {}
+function convertCurrency(price: number, exchange: number): number {
+    return price * exchange * 1.01;
+}
+
 
 const product = "You don't know JS";
 const price = 12.5;
-const priceInUSD = convertToUSD(price);
-const priceInBRL = convertToBRL(price);
+const priceInUSD = convertCurrency(price, 1.4);
+const priceInBRL = convertCurrency(price, 5.6);
 
 console.log("Product: " + product);
 console.log("Price: $" + priceInUSD);
 console.log("Price: R$" + priceInBRL);
+
+//console.log("Price: $" + priceInUSD.toFixed(2));  toFixed() rounds the number to 2 decimal places ($12.50)
+//console.log("Price: R$" + priceInBRL.toFixed(2)); toFixed() rounds the number to 2 decimal places (R$70.7)
 
 /* Expected output:
 

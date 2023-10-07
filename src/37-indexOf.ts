@@ -1,4 +1,4 @@
-export {};
+export { };
 
 /**
  * Write a function that removes an element form array.
@@ -8,7 +8,16 @@ export {};
  */
 
 // You are allowed to edit only this function
-function remove(arr, valueToRemove) {}
+function remove<T>(arr: T[], valueToRemove: T) {
+  const removeIndex = arr.indexOf(valueToRemove);
+
+  if (removeIndex === -1) {
+    return [...arr];
+  }
+
+  const NewArray = [...arr.slice(0, removeIndex), ...arr.slice(removeIndex + 1)]
+  return NewArray;
+}
 
 const numbers = [1, 2, 3];
 const names = ["John", "Alice", "Ellen"];

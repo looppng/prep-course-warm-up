@@ -1,4 +1,4 @@
-export {};
+export { };
 
 /**
  * Implement map function which works similarly as
@@ -8,10 +8,18 @@ export {};
  * and recreate the logic yourself.
  */
 
-const map = () => {};
+const map = <T,>(arr: Array<T>, callback: (value: T, index: number, array: Array<T>) => any) => {
+  const NewArray: Array<any> = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    const result = callback(arr[i], i, arr);
+    NewArray.push(result);
+  }
+  return NewArray;
+};
 
 const numbers = [1, 2, 3];
-const doubled = map(numbers, function(number) {
+const doubled = map(numbers, function (number) {
   return number * 2;
 });
 console.log(doubled); // Expected result: [2, 4, 6]
